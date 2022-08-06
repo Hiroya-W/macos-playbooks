@@ -21,4 +21,4 @@ check:
 
 .PHONY: playbook
 playbook:
-	$(PLAYBOOK_CMD) --ask-become-pass $(PLAYBOOK_DIR)/playbook.yml $(args)
+	$(PLAYBOOK_CMD) --ask-become-pass --ask-vault-password $(PLAYBOOK_DIR)/playbook.yml $(args)
