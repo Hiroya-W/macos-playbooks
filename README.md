@@ -1,7 +1,6 @@
 # osx-playbooks
 
 This is Ansible playbook meant to provision a personal machine running OSX.
-It is intended to run locally on a fresh OSX.
 
 - Target Distro: OSX
 
@@ -9,10 +8,22 @@ See also [Hiroya-W/dotfiles](https://github.com/Hiroya-W/dotfiles).
 
 ## Install dependencies
 
-Install Ansible in the Python virtual environment using poetry.
+Install XCode command line tools.
 
 ```bash
-poetry install
+xcode-select --install
+```
+
+Install Homebrew.
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Install Ansible using brew.
+
+```bash
+brew install ansible
 ```
 
 Install roles and collections from Ansible Galaxy.
