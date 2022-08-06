@@ -20,5 +20,5 @@ check:
 	$(PLAYBOOK_CMD) $(PLAYBOOK_DIR)/playbook.yml --ask-become-pass --check
 
 .PHONY: playbook
-apps:
+playbook:
 	$(PLAYBOOK_CMD) --ask-become-pass $(PLAYBOOK_DIR)/playbook.yml $(args)
