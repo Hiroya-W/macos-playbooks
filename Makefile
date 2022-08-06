@@ -15,18 +15,10 @@ deps:
 
 .PHONY: check
 check:
-	$(PLAYBOOK_CMD) $(PLAYBOOK_DIR)/init.yml --syntax-check
-	$(PLAYBOOK_CMD) $(PLAYBOOK_DIR)/init.yml --list-tasks
-	$(PLAYBOOK_CMD) $(PLAYBOOK_DIR)/init.yml --ask-become-pass --check
+	$(PLAYBOOK_CMD) $(PLAYBOOK_DIR)/playbook.yml --syntax-check
+	$(PLAYBOOK_CMD) $(PLAYBOOK_DIR)/playbook.yml --list-tasks
+	$(PLAYBOOK_CMD) $(PLAYBOOK_DIR)/playbook.yml --ask-become-pass --check
 
-.PHONY: init
-init:
-	$(PLAYBOOK_CMD) --ask-become-pass $(PLAYBOOK_DIR)/init.yml $(args)
-
-.PHONY: system
-system:
-	$(PLAYBOOK_CMD) --ask-become-pass $(PLAYBOOK_DIR)/system.yml $(args)
-
-.PHONY: apps
+.PHONY: playbook
 apps:
-	$(PLAYBOOK_CMD) --ask-become-pass $(PLAYBOOK_DIR)/applications.yml $(args)
+	$(PLAYBOOK_CMD) --ask-become-pass $(PLAYBOOK_DIR)/playbook.yml $(args)
