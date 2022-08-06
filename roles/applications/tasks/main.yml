@@ -40,4 +40,4 @@
     name:
       - karabiner-elements
     state: present
-  become: true
+    sudo_password: "{{ ansible_become_pass }}"
