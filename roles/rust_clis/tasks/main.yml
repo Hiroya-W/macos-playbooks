@@ -1,0 +1,10 @@
+---
+- name: Install CLI built in Rust
+  community.general.homebrew:
+    name:
+      - bat
+      - exa
+      - fd
+      - procs
+      - ripgrep
+    state: present
