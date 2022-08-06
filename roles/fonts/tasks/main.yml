@@ -1,0 +1,13 @@
+---
+- name: Tap Homebrew repositories, state present
+  community.general.homebrew_tap:
+    name:
+      - homebrew/cask-fonts
+    state: present
+
+- name: Install fonts
+  community.general.homebrew_cask:
+    name:
+      - font-hackgen
+      - font-hackgen-nerd
+    state: present
