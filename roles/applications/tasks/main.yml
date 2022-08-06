@@ -22,7 +22,7 @@
     state: present
 
 - name: Install GUI applications using Homebrew Cask
-  community.general.homebrew:
+  community.general.homebrew_cask:
     name:
       - alfred
       - docker
