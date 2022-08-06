@@ -8,7 +8,7 @@ See also [Hiroya-W/dotfiles](https://github.com/Hiroya-W/dotfiles).
 
 ## Install dependencies
 
-Install XCode command line tools.
+Install Xcode command line tools.
 
 ```bash
 xcode-select --install
