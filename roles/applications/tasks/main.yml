@@ -26,7 +26,6 @@
     name:
       - alfred
       - docker
-      - karabiner-elements
       - google-chrome
       - wezterm
       - discord
@@ -35,3 +34,10 @@
       - zoom
       - webex-meetings
     state: present
+
+- name: (sudo) Install GUI applications using Homebrew Cask
+  community.general.homebrew_cask:
+    name:
+      - karabiner-elements
+    state: present
+  become: true
