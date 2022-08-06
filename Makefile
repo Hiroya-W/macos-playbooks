@@ -1,9 +1,9 @@
 SHELL := /bin/bash
 
 PLAYBOOK_DIR := playbooks
-ANSIBLE_CMD := poetry run ansible
-PLAYBOOK_CMD := poetry run ansible-playbook
-GALAXY_CMD := poetry run ansible-galaxy
+ANSIBLE_CMD := ansible
+PLAYBOOK_CMD :=ansible-playbook
+GALAXY_CMD := ansible-galaxy
 
 .PHONY: ping
 ping:
