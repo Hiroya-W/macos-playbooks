@@ -3,6 +3,12 @@
   community.general.homebrew:
     update_homebrew: true
 
+- name: Tap Homebrew repositories, state present
+  community.general.homebrew_tap:
+    name:
+      - homebrew/cask
+    state: present
+
 - name: Install CUI applications using Homebrew
   community.general.homebrew:
     name:
