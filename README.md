@@ -1,8 +1,8 @@
-# osx-playbooks
+# macos-playbooks
 
-This is Ansible playbook meant to provision a personal machine running OSX.
+This is Ansible playbook meant to provision a personal machine running macOS.
 
-- Target Distro: OSX
+- Target: macOS
 
 See also [Hiroya-W/dotfiles](https://github.com/Hiroya-W/dotfiles).
 
