@@ -19,6 +19,7 @@
       - ghq
       - jq
       - mas
+    state: present
 
 - name: Install GUI applications using Homebrew Cask
   community.general.homebrew:
@@ -33,3 +34,4 @@
       - visual-studio-code
       - zoom
       - webex-meetings
+    state: present
