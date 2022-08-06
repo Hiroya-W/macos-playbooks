@@ -1,0 +1,29 @@
+---
+- name: Update Homebrew
+  community.general.homebrew:
+    update_homebrew: true
+
+- name: Install CUI applications using Homebrew
+  community.general.homebrew:
+    name:
+      - asdf
+      - fzf
+      - peco
+      - gh
+      - ghq
+      - jq
+      - mas
+
+- name: Install GUI applications using Homebrew Cask
+  community.general.homebrew:
+    name:
+      - alfred
+      - docker
+      - karabiner-elements
+      - google-chrome
+      - wezterm
+      - discord
+      - slack
+      - visual-studio-code
+      - zoom
+      - webex-meetings
