@@ -4,4 +4,4 @@ ansible_become_pass: ""
 
 dotfiles:
   url: https://github.com/Hiroya-W/dotfiles.git
-  destination: /home/{{ ansible_env.USER }}/.local/share/chezmoi
+  destination: /Users/{{ ansible_env.USER }}/.local/share/chezmoi
