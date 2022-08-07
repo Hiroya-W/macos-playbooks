@@ -26,11 +26,7 @@ Install Ansible using brew.
 brew install ansible
 ```
 
-Install roles and collections from Ansible Galaxy.
-
-```bash
-make deps
-```
+## Before run playbook
 
 Set your password to `ansible_become_password` in `inventory/group_vars/all.yml`.
 
@@ -43,17 +39,11 @@ ansible_becom_password: "p@ssw0rd"
 Start the provisioning the system.
 
 ```bash
-make system
-```
-
-(Optional) Install applications.
-
-```bash
-make apps
+make playbook
 ```
 
 You can use the tags defined in the playbook to execute only specific roles.
 
 ```bash
-make system args="--tags HERE_TAGS"
+make playbook args="--tags HERE_TAGS"
 ```
