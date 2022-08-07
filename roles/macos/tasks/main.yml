@@ -30,3 +30,11 @@
     type: int
     value: 2
     state: present
+
+- name: Enable tap as click
+  community.general.osx_defaults:
+    domain: com.apple.AppleMultitouchTrackpad
+    key: Clicking
+    type: int
+    value: 1
+    state: present
