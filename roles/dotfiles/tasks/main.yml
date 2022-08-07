@@ -1,0 +1,20 @@
+---
+- name: Install chezmoi
+  community.general.homebrew:
+    name: chezmoi
+    state: present
+
+- name: Clone user dotfiles
+  git:
+    repo: "{{ dotfiles.url }}"
+    dest: /home/{{ ansible_env.USER }}/{{ dotfiles.destination }}
+    update: no
+
+- name: Check changes in dotfiles
+  command: chezmoi diff
+  register: result
+  changed_when: False
+
+- name: Apply user dotfiles
+  command: chezmoi apply --force
+  when: result.stdout | length > 0

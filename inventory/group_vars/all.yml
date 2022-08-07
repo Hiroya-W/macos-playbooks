@@ -1,2 +1,6 @@
 ---
 ansible_become_password: ""
+
+dotfiles:
+  url: https://github.com/Hiroya-W/dotfiles.git
+  destination: /home/{{ ansible_env.USER }}/.local/share/chezmoi
