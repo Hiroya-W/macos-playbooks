@@ -6,7 +6,7 @@
 
 - name: Create directory of dotfiles destinaiton
   file:
-    path: {{ dotfiles.destination | dirname }}
+    path: "{{ dotfiles.destination | dirname }}"
     state: directory
 
 - name: Clone user dotfiles
