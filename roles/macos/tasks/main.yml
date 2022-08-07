@@ -58,3 +58,28 @@
     type: float
     value: -1
     state: present
+
+# Finder
+- name: Show all file extention
+  community.general.osx_defaults:
+    domain: "Apple Global Domain"
+    key: AppleShowAllExtensions
+    type: int
+    value: 1
+    state: present
+
+- name: Display the full pathname
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: _FXShowPosixPathInTitle
+    type: bool
+    value: true
+    state: present
+
+- name: Display path
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: ShowPathbar
+    type: bool
+    value: true
+    state: present
