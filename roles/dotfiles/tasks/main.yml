@@ -12,7 +12,7 @@
 - name: Clone user dotfiles
   git:
     repo: "{{ dotfiles.url }}"
-    dest: /home/{{ ansible_env.USER }}/{{ dotfiles.destination }}
+    dest: "{{ dotfiles.destination }}"
     update: no
 
 - name: Check changes in dotfiles
