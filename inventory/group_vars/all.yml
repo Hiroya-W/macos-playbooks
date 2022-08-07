@@ -8,3 +8,4 @@ vault_become_pass: !vault |
           3934⏎
 
 become_pass: "{{ vault_become_pass }}"
+become_pass: "{{ vault_become_pass }}"
