@@ -5,7 +5,7 @@
     state: present
 
 - name: Fetch dotfiles
-  command: chezmoi --init Hiroya-W/dotfiles
+  command: chezmoi init Hiroya-W/dotfiles
   changed_when: False
 
 - name: Check changes in dotfiles
