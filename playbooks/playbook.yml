@@ -4,3 +4,4 @@
     - { role: applications, tags: applications }
     - { role: fonts, tags: fonts }
     - { role: rust_clis, togs: rust_clis }
+    - { role: dotfiles, tags: dotfiles }
