@@ -42,6 +42,7 @@
       - vlc
       - gimp
       - inkscape
+      - zotero
     state: present
 
 - name: (sudo) Install GUI applications using Homebrew Cask
