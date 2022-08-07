@@ -1,5 +1,5 @@
 ---
-- name: Tap Homebrew repositories, state present
+- name: Tap homebrew/cask-fonts, state present
   community.general.homebrew_tap:
     name:
       - homebrew/cask-fonts

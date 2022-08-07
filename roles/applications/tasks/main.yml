@@ -3,7 +3,7 @@
   community.general.homebrew:
     update_homebrew: true
 
-- name: Tap Homebrew repositories, state present
+- name: Tap homebrew/cask, state present
   community.general.homebrew_tap:
     name:
       - homebrew/cask
