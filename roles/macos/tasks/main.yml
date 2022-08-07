@@ -14,3 +14,19 @@
     type: float
     value: 0
     state: present
+
+- name: KeyRepeat immediately
+  community.general.osx_defaults:
+    domain: "Apple Global Domain"
+    key: InitialKeyRepeat
+    type: int
+    value: 15
+    state: present
+
+- name: KeyRepeat quickly
+  community.general.osx_defaults:
+    domain: "Apple Global Domain"
+    key: KeyRepeat
+    type: int
+    value: 2
+    state: present
