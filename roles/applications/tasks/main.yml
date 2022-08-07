@@ -32,16 +32,28 @@
       - docker
       - google-chrome
       - wezterm
+      - iterm2
       - discord
       - slack
       - visual-studio-code
       - zoom
       - webex-meetings
+      - vlc
+      - gimp
+      - inkscape
     state: present
 
 - name: (sudo) Install GUI applications using Homebrew Cask
   community.general.homebrew_cask:
     name:
       - karabiner-elements
+      - google-drive
+      - google-japanese-ime
     state: present
     sudo_password: "{{ ansible_become_pass }}"
+
+- name: Install App Store applications
+  community.general.mas:
+    id:
+      - 409183694 # Keynote
+    state: present
