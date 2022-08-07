@@ -1,7 +1,7 @@
 ---
 - name: Enable autohide for dock
   community.general.osx_defaults:
-    domain: comi.apple.dock
+    domain: com.apple.dock
     key: autohide
     type: int
     value: 1
@@ -9,7 +9,7 @@
 
 - name: Dock appears instantly
   community.general.osx_defaults:
-    domain: comi.apple.dock
+    domain: com.apple.dock
     key: autohide-delay
     type: float
     value: 0
