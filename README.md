@@ -32,6 +32,12 @@ Install roles and collections from Ansible Galaxy.
 make deps
 ```
 
+Set your password to `ansible_become_password` in `inventory/group_vars/all.yml`.
+
+```yml:inventory/group_vars/all.yml
+ansible_becom_password: "p@ssw0rd"
+```
+
 ## Run playbook
 
 Start the provisioning the system.
