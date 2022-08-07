@@ -83,3 +83,11 @@
     type: bool
     value: true
     state: present
+
+- name: Open home dir when create new window
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: NewWindowTargetPath
+    type: string
+    value: "file:///Users/{{ ansible_env.USER }}"
+    state: present
