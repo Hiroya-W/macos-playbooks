@@ -101,3 +101,18 @@
     value: 1
     state: present
 
+- name: Set Dateformat with Seconds on clock
+  community.general.osx_defaults:
+    domain: com.apple.menuextra.clock
+    key: DateFormat
+    type: string
+    value: "M\\U6708d\\U65e5(EEE)  H:mm:ss"
+    state: present
+
+- name: Enabled Seconds on clock
+  community.general.osx_defaults:
+    domain: com.apple.menuextra.clock
+    key: ShowSeconds
+    type: int
+    value: 1
+    state: present
