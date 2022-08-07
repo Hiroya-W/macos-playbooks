@@ -1,5 +1,6 @@
 ---
-ansible_become_password: ""
+# Require task of applications/homebrew_cask
+ansible_become_pass: ""
 
 dotfiles:
   url: https://github.com/Hiroya-W/dotfiles.git
