@@ -12,6 +12,7 @@
 - name: Install CUI applications using Homebrew
   community.general.homebrew:
     name:
+      - fish
       - asdf
       - fzf
       - peco
