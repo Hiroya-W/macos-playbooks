@@ -91,3 +91,13 @@
     type: string
     value: "file:///Users/{{ ansible_env.USER }}"
     state: present
+
+# ControlCenter
+- name: Show bluetooth icon
+  community.general.osx_defaults:
+    domain: com.apple.controlcenter
+    key: "NSStatusItem Visible Bluetooth"
+    type: int
+    value: 1
+    state: present
+
