@@ -2,6 +2,7 @@
 - name: Install CLI built in Rust
   community.general.homebrew:
     name:
+      - starship
       - bat
       - exa
       - fd
