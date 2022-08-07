@@ -4,6 +4,11 @@
     name: chezmoi
     state: present
 
+- name: Create directory of dotfiles destinaiton
+  file:
+    path: {{ dotfiles.destination | dirname }}
+    state: directory
+
 - name: Clone user dotfiles
   git:
     repo: "{{ dotfiles.url }}"
