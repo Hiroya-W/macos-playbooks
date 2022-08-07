@@ -7,6 +7,7 @@
   community.general.homebrew_tap:
     name:
       - homebrew/cask
+      - jesseduffield/lazygit
     state: present
 
 - name: Install CUI applications using Homebrew
@@ -15,6 +16,7 @@
       - fish
       - asdf
       - neovim
+      - lazygit
       - fzf
       - peco
       - gh
