@@ -4,8 +4,12 @@
     name: chezmoi
     state: present
 
-- name: Fetch dotfiles
+- name: Install dotfiles
   command: chezmoi init Hiroya-W/dotfiles
+  changed_when: False
+
+- name: Pull dotfiles
+  command: chezmoi git pull
   changed_when: False
 
 - name: Check changes in dotfiles
