@@ -1,4 +1,5 @@
 ---
+# Dock
 - name: Enable autohide for dock
   community.general.osx_defaults:
     domain: com.apple.dock
@@ -15,6 +16,7 @@
     value: 0
     state: present
 
+# Keyboard
 - name: KeyRepeat immediately
   community.general.osx_defaults:
     domain: "Apple Global Domain"
@@ -23,6 +25,7 @@
     value: 15
     state: present
 
+# Trackpad
 - name: KeyRepeat quickly
   community.general.osx_defaults:
     domain: "Apple Global Domain"
@@ -39,6 +42,7 @@
     value: 1
     state: present
 
+# External mouse
 - name: Enable TwoButton Mode
   community.general.osx_defaults:
     domain: com.apple.AppleMultitouchMouse
