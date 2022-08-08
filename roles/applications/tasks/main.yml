@@ -37,7 +37,6 @@
       - slack
       - gitify
       - visual-studio-code
-      - zoom
       - webex-meetings
       - vlc
       - gimp
@@ -48,6 +47,7 @@
 - name: (sudo) Install GUI applications using Homebrew Cask
   community.general.homebrew_cask:
     name:
+      - zoom
       - karabiner-elements
       - google-drive
       - google-japanese-ime
