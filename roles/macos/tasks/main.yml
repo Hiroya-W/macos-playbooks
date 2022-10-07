@@ -34,31 +34,6 @@
     value: 2
     state: present
 
-- name: Enable tap as click
-  community.general.osx_defaults:
-    domain: com.apple.AppleMultitouchTrackpad
-    key: Clicking
-    type: int
-    value: 1
-    state: present
-
-# External mouse
-- name: Enable TwoButton Mode
-  community.general.osx_defaults:
-    domain: com.apple.AppleMultitouchMouse
-    key: MouseButtonMode
-    type: string
-    value: TwoButton
-    state: present
-
-- name: Disable mouse scaling
-  community.general.osx_defaults:
-    domain: "Apple Global Domain"
-    key: com.apple.mouse.scaling
-    type: float
-    value: -1
-    state: present
-
 # Finder
 - name: Show all file extention
   community.general.osx_defaults:
