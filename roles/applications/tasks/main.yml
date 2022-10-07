@@ -37,7 +37,6 @@
       - slack
       - gitify
       - visual-studio-code
-      - webex-meetings
       - vlc
       - gimp
       - inkscape
@@ -49,6 +48,7 @@
     name:
       - zoom
       - karabiner-elements
+      - webex-meetings
       - google-drive
       - google-japanese-ime
     state: present
