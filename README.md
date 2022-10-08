@@ -26,6 +26,12 @@ Install Ansible using brew.
 brew install ansible
 ```
 
+For Apple silicon Mac, install Rosetta2.
+
+```bash
+softwareupdate --install-rosetta
+```
+
 ## Before run playbook
 
 Set your password to `ansible_become_password` in `inventory/group_vars/all.yml`.
