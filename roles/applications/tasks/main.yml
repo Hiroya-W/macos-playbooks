@@ -41,6 +41,7 @@
       - gimp
       - inkscape
       - zotero
+      - spotify
     state: present
 
 - name: (sudo) Install GUI applications using Homebrew Cask
