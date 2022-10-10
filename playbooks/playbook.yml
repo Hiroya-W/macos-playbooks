@@ -2,6 +2,7 @@
 - hosts: local
   roles:
     - { role: applications, tags: applications }
+    - { role: fish, tags: fish }
     - { role: fonts, tags: fonts }
     - { role: rust_clis, togs: rust_clis }
     - { role: dotfiles, tags: dotfiles }

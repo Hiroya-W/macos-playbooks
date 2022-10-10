@@ -5,3 +5,6 @@ ansible_become_pass: ""
 dotfiles:
   url: https://github.com/Hiroya-W/dotfiles.git
   destination: /Users/{{ ansible_env.USER }}/.local/share/chezmoi
+
+fisher_plugins:
+  - "PatrickF1/fzf.fish"

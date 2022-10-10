@@ -1,0 +1,25 @@
+---
+- name: Install fish
+  community.general.homebrew:
+    name:
+      - fish
+      - fisher
+    state: present
+
+- block:
+    - name: Get installed plugins
+      command: "fish -c 'fisher list'"
+      register: result
+      changed_when: False
+      failed_when: False
+
+    - name: Set fisher_plugins
+      set_fact:
+        fisher_plugins: "{{ result.stdout }}"
+
+    - include_tasks: fisher_plugins.yml
+      loop_control:
+        loop_var: plugin_name
+      loop:
+        - "{{ fisher_plugins }}"
+  when: fisher_plugins is defined
