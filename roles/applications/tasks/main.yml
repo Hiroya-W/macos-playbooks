@@ -29,6 +29,7 @@
     name:
       - alfred
       - docker
+      - jetbrains-toolbox
       - google-chrome
       - wezterm
       - iterm2
