@@ -15,11 +15,13 @@
 
     - name: Set fisher_plugins
       set_fact:
-        fisher_plugins: "{{ result.stdout }}"
+        installed_plugins: "{{ result.stdout }}"
 
-    - include_tasks: fisher_plugins.yml
-      loop_control:
-        loop_var: plugin_name
-      loop:
-        - "{{ fisher_plugins }}"
+    - debug:
+        msg: "{{ installed_plugins }}"
+
+    - name: Install plugins
+      command: "fish -c 'fisher install {{ item }}'"
+      with_items: "{{ fisher_plugins }}"
+      when: "(item | lower) not in installed_plugins"
   when: fisher_plugins is defined

@@ -1,4 +1,0 @@
----
-- name: Install {{ plugin_name }}
-  command: "fish -c 'fisher install {{ plugin_name }}'"
-  when: plugin_name not in fisher_plugins
