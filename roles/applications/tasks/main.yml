@@ -23,6 +23,7 @@
       - jq
       - mas
     state: present
+    path: "/opt/homebrew/bin:/usr/local/bin"
 
 - name: Install GUI applications using Homebrew Cask
   community.general.homebrew_cask:
@@ -44,6 +45,7 @@
       - zotero
       - spotify
     state: present
+    path: "/opt/homebrew/bin:/usr/local/bin"
 
 - name: (sudo) Install GUI applications using Homebrew Cask
   community.general.homebrew_cask:
@@ -54,6 +56,7 @@
       - google-drive
       - google-japanese-ime
     state: present
+    path: "/opt/homebrew/bin:/usr/local/bin"
     sudo_password: "{{ ansible_become_pass }}"
 
 - name: Install App Store applications
