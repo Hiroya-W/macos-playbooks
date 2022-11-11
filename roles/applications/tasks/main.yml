@@ -28,6 +28,7 @@
   community.general.homebrew_cask:
     name:
       - raycast
+      - rectangle
       - docker
       - jetbrains-toolbox
       - google-chrome
