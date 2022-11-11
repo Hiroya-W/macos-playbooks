@@ -27,7 +27,7 @@
 - name: Install GUI applications using Homebrew Cask
   community.general.homebrew_cask:
     name:
-      - alfred
+      - raycast
       - docker
       - jetbrains-toolbox
       - google-chrome
