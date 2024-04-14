@@ -13,7 +13,7 @@
 - name: Install CUI applications using Homebrew
   community.general.homebrew:
     name:
-      - asdf
+      - mise
       - neovim
       - lazygit
       - fzf
@@ -22,19 +22,21 @@
       - ghq
       - jq
       - mas
+      - go
+      - deno
     state: present
     path: "/opt/homebrew/bin:/usr/local/bin"
 
 - name: Install GUI applications using Homebrew Cask
   community.general.homebrew_cask:
     name:
+      - neovide
       - raycast
       - rectangle
       - docker
       - jetbrains-toolbox
       - google-chrome
       - wezterm
-      - iterm2
       - discord
       - slack
       - gitify
@@ -42,7 +44,6 @@
       - vlc
       - gimp
       - inkscape
-      - zotero
       - spotify
     state: present
     path: "/opt/homebrew/bin:/usr/local/bin"
@@ -50,17 +51,14 @@
 - name: (sudo) Install GUI applications using Homebrew Cask
   community.general.homebrew_cask:
     name:
-      - zoom
       - karabiner-elements
-      - webex-meetings
       - google-drive
-      - google-japanese-ime
     state: present
     path: "/opt/homebrew/bin:/usr/local/bin"
     sudo_password: "{{ ansible_become_pass }}"
 
-- name: Install App Store applications
-  community.general.mas:
-    id:
-      - 409183694 # Keynote
-    state: present
+# - name: Install App Store applications
+#   community.general.mas:
+#     id:
+#       - 409183694 # Keynote
+#     state: present
